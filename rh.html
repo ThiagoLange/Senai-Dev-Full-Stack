@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Humanos - Cargos e Salários</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="rh-container">
+        <h2>Portal RH</h2>
+        <button id="show-table-btn">Ver cargos e salários</button>
+
+        <div id="table-container">
+             <table id="salary-table"> <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Setor</th>
+                        <th>Cargo</th>
+                        <th>Salário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="back-button">Voltar para Login</a>
+    </div>
+
+    <script>
+        // O JavaScript permanece o mesmo da resposta anterior
+        document.addEventListener('DOMContentLoaded', () => {
+            const showButton = document.getElementById('show-table-btn');
+            const salaryTable = document.getElementById('salary-table');
+            const tableBody = salaryTable.querySelector('tbody');
+
+            // Dados de exemplo
+            const employeeData = [
+                { nome: 'Ana Silva', setor: 'RH', cargo: 'Analista de RH Jr', salario: 'R$ 3.500,00' },
+                { nome: 'Carlos Souza', setor: 'RH', cargo: 'Gerente de RH', salario: 'R$ 9.800,00' },
+                { nome: 'Beatriz Lima', setor: 'Comercial', cargo: 'Vendedora', salario: 'R$ 4.200,00' },
+                { nome: 'Daniel Costa', setor: 'TI', cargo: 'Desenvolvedor Pleno', salario: 'R$ 7.000,00' },
+                 { nome: 'Fernanda Dias', setor: 'RH', cargo: 'Assistente de DP', salario: 'R$ 2.800,00' }
+            ];
+
+            showButton.addEventListener('click', () => {
+                tableBody.innerHTML = ''; // Limpa tabela
+                employeeData.forEach(emp => {
+                    const row = tableBody.insertRow();
+                    row.insertCell().textContent = emp.nome;
+                    row.insertCell().textContent = emp.setor;
+                    row.insertCell().textContent = emp.cargo;
+                    row.insertCell().textContent = emp.salario;
+                });
+                salaryTable.style.display = 'table'; // Mostra a tabela
+                showButton.style.display = 'none'; // Esconde o botão
+            });
+        });
+    </script>
+</body>
+</html>
