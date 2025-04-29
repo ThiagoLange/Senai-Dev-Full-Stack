@@ -203,3 +203,74 @@ button[type="submit"]:hover {
     color: #333;
     font-weight: bold; /* Cabeçalho em negrito */
 }
+
+/* Reutilizando/Adaptando estilo de container */
+.ti-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 450px; /* Ajuste conforme necessário */
+    text-align: center;
+}
+
+.ti-container .input-group { /* Reutilizando estilo do index.html se aplicável */
+     margin-bottom: 20px;
+     text-align: left;
+}
+
+.ti-container label {
+     display: block;
+     margin-bottom: 5px;
+     color: #555;
+     font-weight: bold;
+}
+
+.ti-container input[type="number"] { /* Estilo para o input numérico */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+     /* Remove setas padrão em alguns navegadores, se desejado */
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.ti-container input[type="number"]::-webkit-outer-spin-button,
+.ti-container input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.ti-container button { /* Estilo para o botão de conversão */
+    padding: 10px 20px;
+    background-color: #616161;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.0em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espaço acima do botão */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.ti-container button:hover {
+    background-color: #424242;
+}
+
+#binary-result { /* Estilo para a área de resultado */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0; /* Fundo levemente diferente */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    min-height: 1.5em; /* Altura mínima para evitar 'saltos' */
+    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para binário */
+    font-weight: bold;
+    color: #333;
+    word-wrap: break-word; /* Quebra linhas longas de binários */
+}

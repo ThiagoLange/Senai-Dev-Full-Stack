@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI - Conversor Binário</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="ti-container"> <h2>Conversor Decimal para Binário</h2>
+
+        <div class="input-group">
+            <label for="decimal-input">Número Decimal:</label>
+            <input type="number" id="decimal-input" name="decimal-input" placeholder="Digite um número inteiro" required>
+        </div>
+
+        <button id="convert-btn">Converter para Binário</button>
+
+        <div id="binary-result-container">
+            <p><strong>Resultado Binário:</strong></p>
+            <div id="binary-result"></div> </div>
+
+        <a href="index.html" class="back-button">Voltar para Login</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const decimalInput = document.getElementById('decimal-input');
+            const convertButton = document.getElementById('convert-btn');
+            const resultDisplay = document.getElementById('binary-result');
+
+            convertButton.addEventListener('click', () => {
+                const decimalValue = decimalInput.value.trim();
+
+                // Limpa resultado anterior
+                resultDisplay.textContent = '';
+                resultDisplay.style.color = '#333'; // Reseta cor
+
+                // Verifica se o campo não está vazio
+                if (decimalValue === '') {
+                    resultDisplay.textContent = 'Por favor, insira um número.';
+                    resultDisplay.style.color = 'red';
+                    return;
+                }
+
+                // Tenta converter para número inteiro
+                const number = parseInt(decimalValue, 10);
+
+                // Verifica se a conversão foi bem-sucedida e se é um número não negativo
+                if (isNaN(number)) {
+                    resultDisplay.textContent = 'Entrada inválida. Insira apenas números inteiros.';
+                     resultDisplay.style.color = 'red';
+                } else if (number < 0) {
+                    resultDisplay.textContent = 'Insira um número inteiro não negativo.';
+                    resultDisplay.style.color = 'red';
+                 } else {
+                    // Converte para binário e exibe
+                    const binaryString = number.toString(2);
+                    resultDisplay.textContent = binaryString;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

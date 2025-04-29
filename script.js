@@ -1,4 +1,4 @@
-// Conteúdo final do arquivo: 06-Exemplo-1/script.js
+// Conteúdo final completo do arquivo: 06-Exemplo-1/script.js
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const usercodeElement = document.getElementById('usercode');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Credenciais válidas para cada setor
     const validCredentials = {
         comercial: { usercode: 'CMCL12', password: 'Com&c1@l' },
-        rh: { usercode: '98HR', password: 'RH!@2025' }, // Credenciais para RH
+        rh: { usercode: '98HR', password: 'RH!@2025' },
         ti: { usercode: 'DEV4567TI', password: 'IT&&||==2025' }
     };
 
@@ -42,13 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (selectedSector === 'comercial') {
                     window.location.href = 'comercial.html'; // Redireciona para Comercial
                 } else if (selectedSector === 'rh') {
-                     // ***** ATUALIZAÇÃO AQUI *****
                      window.location.href = 'rh.html'; // Redireciona para RH
-                     // ***** FIM DA ATUALIZAÇÃO *****
                 } else if (selectedSector === 'ti') {
-                    // Para TI, mostra alerta (ou redireciona se houver página)
-                     alert(`Login bem-sucedido para o setor ${selectedSector.toUpperCase()}!`);
-                     // Exemplo: window.location.href = 'ti.html';
+                     window.location.href = 'ti.html'; // Redireciona para TI
                 } else {
                      // Tratamento para outros setores (se adicionados)
                      alert(`Login bem-sucedido para o setor ${selectedSector.toUpperCase()}!`);
@@ -67,4 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
             errorMessageElement.style.display = 'block';
         }
     });
-});
+}); // Fim do addEventListener 'DOMContentLoaded'
