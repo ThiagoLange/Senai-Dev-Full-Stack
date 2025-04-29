@@ -1,0 +1,156 @@
+/* Reset básico e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz padding e border serem incluídos na largura/altura total */
+}
+
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da tela */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+}
+
+body {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    /* Gradiante de cinza como fundo */
+    background: linear-gradient(135deg, #E0E0E0, #BDBDBD, #9E9E9E);
+    padding: 20px; /* Adiciona um padding geral para evitar que os containers colem nas bordas */
+}
+
+
+/* Estilos do container do formulário de login */
+.login-container {
+    background-color: #f7f7f7;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.8em;
+}
+
+/* Estilos dos grupos de input (label + campo) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Estilos dos campos de input e select */
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+.input-group select {
+    appearance: none; /* Remove aparência padrão do sistema */
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos do placeholder nos inputs */
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Estilos do botão de submit */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #616161; /* Tom de cinza para o botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #424242; /* Tom de cinza mais escuro no hover */
+}
+
+/* Estilo para a div de mensagem de erro (em index.html) */
+#error-message {
+    color: red;
+    margin-top: 15px;
+    font-weight: bold;
+    display: none; /* Começa oculta */
+    text-align: center;
+    min-height: 1.2em; /* Evita "saltos" no layout */
+}
+
+/* Estilos do container da visualização do produto */
+.product-container {
+    background-color: #ffffff; /* Fundo branco para destacar */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 450px; /* Pode ser um pouco maior que o login */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.product-container h2 {
+    margin-bottom: 20px;
+    color: #2c3e50; /* Um azul/cinza escuro */
+}
+
+.product-container img {
+    max-width: 80%; /* Limita a largura da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    margin-bottom: 20px;
+    border: 1px solid #eee; /* Borda sutil */
+}
+
+.product-container h3 { /* Nome do produto */
+    margin-bottom: 10px;
+    color: #34495e; /* Outro tom de azul/cinza */
+    font-size: 1.4em;
+}
+
+.product-container p { /* Preço do produto */
+    font-size: 1.2em;
+    color: #16a085; /* Um tom de verde/azul */
+    font-weight: bold;
+    margin-bottom: 15px; /* Espaço antes da linha/botão */
+}
+
+/* Estilo para o link/botão de voltar (em produto.html) */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #757575; /* Cinza */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555555; /* Cinza mais escuro */
+}
